@@ -1,0 +1,94 @@
+ERC report (10/6/2020 8:39:23 PM, Encoding UTF8 )
+
+***** Sheet /
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(231.14 mm, 90.17 mm): Pin 5 (Passive) of component J3 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(231.14 mm, 85.09 mm): Pin 7 (Passive) of component J3 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(231.14 mm, 95.25 mm): Pin 3 (Passive) of component J3 is unconnected.
+ErrType(6): Mismatch between hierarchical labels and pins sheets
+    @(177.80 mm, 113.03 mm): Sheet label PWM is not connected to a hierarchical label.
+ErrType(3): Pin connected to other pins, but not driven by any pin
+    @(156.21 mm, 29.21 mm): Pin 1 (Power input) of component #PWR0111 is not driven (Net 11).
+ErrType(3): Pin connected to other pins, but not driven by any pin
+    @(48.26 mm, 49.53 mm): Pin 1 (Power input) of component #PWR0103 is not driven (Net 18).
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(36.83 mm, 60.96 mm): Pin 4 (Passive) of component U1 is unconnected.
+
+***** Sheet /MCU/
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(165.10 mm, 101.60 mm): Pin 30 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 78.74 mm): Pin 18 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 81.28 mm): Pin 19 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 104.14 mm): Pin 21 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 106.68 mm): Pin 22 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 109.22 mm): Pin 25 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 111.76 mm): Pin 26 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 114.30 mm): Pin 27 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 116.84 mm): Pin 28 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 83.82 mm): Pin 20 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 86.36 mm): Pin 39 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 88.90 mm): Pin 40 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 91.44 mm): Pin 41 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 99.06 mm): Pin 45 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 101.60 mm): Pin 46 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 68.58 mm): Pin 2 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(165.10 mm, 81.28 mm): Pin 11 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(165.10 mm, 104.14 mm): Pin 31 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(165.10 mm, 106.68 mm): Pin 32 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(165.10 mm, 109.22 mm): Pin 33 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(165.10 mm, 99.06 mm): Pin 29 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(165.10 mm, 116.84 mm): Pin 38 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(165.10 mm, 83.82 mm): Pin 12 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(165.10 mm, 86.36 mm): Pin 13 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 73.66 mm): Pin 4 (Bidirectional) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 60.96 mm): Pin 5 (Input) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 63.50 mm): Pin 6 (Input) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(144.78 mm, 45.72 mm): Pin 1 (Power input) of component U2 is unconnected.
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(132.08 mm, 71.12 mm): Pin 3 (Bidirectional) of component U2 is unconnected.
+
+***** Sheet /CurrentControl/
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(119.38 mm, 90.17 mm): Pin 2 (Input) of component U3 is unconnected.
+ErrType(3): Pin connected to other pins, but not driven by any pin
+    @(219.71 mm, 39.37 mm): Pin 1 (Power input) of component #PWR0134 is not driven (Net 50).
+ErrType(5): Conflict problem between pins. Severity: error
+    @(143.51 mm, 88.90 mm): Pin 7 (Output) of component U3 is connected to 
+    @(143.51 mm, 91.44 mm): pin 6 (Output) of component U3 (net 51).
+ErrType(3): Pin connected to other pins, but not driven by any pin
+    @(220.98 mm, 26.67 mm): Pin 1 (Power input) of component #PWR0133 is not driven (Net 52).
+ErrType(2): Pin not connected (use a “no connection” flag to suppress this error)
+    @(226.06 mm, 33.02 mm): Pin 2 (Passive) of component J4 is unconnected.
+
+***** Sheet /Buttons/
+
+ ** ERC messages: 41  Errors 1  Warnings 40
