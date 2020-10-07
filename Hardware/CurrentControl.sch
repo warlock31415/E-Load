@@ -541,12 +541,7 @@ Connection ~ 8550 3400
 Wire Wire Line
 	8775 3600 8775 3750
 Wire Wire Line
-	8775 3750 9375 3750
-Wire Wire Line
-	9375 3750 9375 3500
-Wire Wire Line
 	9450 3500 9375 3500
-Connection ~ 9375 3500
 Wire Wire Line
 	9750 3500 9825 3500
 Wire Wire Line
@@ -654,4 +649,9 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 9600 350
 	1    9600 3500
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	9750 3500 9750 3750
+Wire Wire Line
+	8775 3750 9750 3750
+Connection ~ 9750 3500
 $EndSCHEMATC
