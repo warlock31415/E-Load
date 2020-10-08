@@ -30,21 +30,9 @@ F10 "OLED_RST" I R 7000 3750 50
 F11 "BUTT_A" I L 5350 3550 50 
 F12 "BUTT_B" I L 5350 3650 50 
 F13 "BUTT_C" I L 5350 3750 50 
-F14 "PWM" I R 7000 4350 50 
 $EndSheet
 Text Notes 10050 1100 0    50   ~ 0
 Requirements\n1. 12V DC input\n2. 0-10A Load current\n3. OLED Display\n4. 0- 30V load voltage\n5. 10mA increments\n
-$Comp
-L Connector:Barrel_Jack J1
-U 1 1 5F7B8D10
-P 1450 1200
-F 0 "J1" H 1507 1525 50  0000 C CNN
-F 1 "Barrel_Jack" H 1507 1434 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 1500 1160 50  0001 C CNN
-F 3 "~" H 1500 1160 50  0001 C CNN
-	1    1450 1200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C_Small C1
 U 1 1 5F7B9DE4
@@ -246,7 +234,8 @@ U 5F7C24CB
 F0 "CurrentControl" 50
 F1 "CurrentControl.sch" 50
 F2 "ADC" I L 7275 4425 50 
-F3 "PWM" O L 7275 4350 50 
+F3 "SCL" I L 7275 4250 50 
+F4 "SDA" I L 7275 4325 50 
 $EndSheet
 $Comp
 L Connector:Conn_01x08_Male J3
@@ -260,9 +249,9 @@ F 3 "~" H 9300 3650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7000 3950 9100 3950
+	7000 3950 7075 3950
 Wire Wire Line
-	7000 3850 9100 3850
+	7000 3850 7200 3850
 Wire Wire Line
 	7000 3750 7200 3750
 Wire Wire Line
@@ -380,8 +369,6 @@ F 3 "~" H 6200 2975 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7275 4425 7000 4425
-Wire Wire Line
-	7275 4350 7000 4350
 $Comp
 L power:+12V #PWR0110
 U 1 1 5F7DD5D6
@@ -434,4 +421,36 @@ NoConn ~ 1450 2400
 NoConn ~ 9100 3350
 NoConn ~ 9100 3550
 NoConn ~ 9100 3750
+Wire Wire Line
+	7075 3950 7075 4325
+Wire Wire Line
+	7075 4325 7275 4325
+Connection ~ 7075 3950
+Wire Wire Line
+	7075 3950 9100 3950
+Wire Wire Line
+	7200 3850 7200 4250
+Wire Wire Line
+	7200 4250 7275 4250
+Connection ~ 7200 3850
+Wire Wire Line
+	7200 3850 9100 3850
+Text Notes 9050 4275 0    50   ~ 0
+ADDR: 0111101
+Text Notes 9050 4200 0    50   ~ 0
+To SSD1306\nNOTE: will need to desolder \nvoltage translators on OLED
+$Comp
+L Connector:Barrel_Jack_Switch J1
+U 1 1 5F8352CB
+P 1450 1200
+F 0 "J1" H 1507 1517 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 1507 1426 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 1500 1160 50  0001 C CNN
+F 3 "~" H 1500 1160 50  0001 C CNN
+	1    1450 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 1200 1750 1300
+Connection ~ 1750 1300
 $EndSCHEMATC

@@ -291,10 +291,6 @@ Wire Wire Line
 Connection ~ 10200 1850
 Wire Wire Line
 	10200 1850 10400 1850
-Wire Wire Line
-	6500 3900 6850 3900
-Text HLabel 6850 3900 2    50   Input ~ 0
-PWM
 NoConn ~ 5200 2400
 NoConn ~ 5200 2500
 NoConn ~ 5200 2700
@@ -335,8 +331,6 @@ $EndComp
 Wire Wire Line
 	4850 3600 5200 3600
 NoConn ~ 6500 3500
-Text Notes 6850 4000 0    50   ~ 0
-Needs to run at >500kHz
 $Comp
 L Device:LED_Small_ALT D?
 U 1 1 5F81F246
