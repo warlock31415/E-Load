@@ -444,9 +444,9 @@ L Connector:Barrel_Jack_Switch J1
 U 1 1 5F8352CB
 P 1450 1200
 F 0 "J1" H 1507 1517 50  0000 C CNN
-F 1 "Barrel_Jack_Switch" H 1507 1426 50  0000 C CNN
+F 1 "PJ-002A" H 1507 1426 50  0000 C CNN
 F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 1500 1160 50  0001 C CNN
-F 3 "~" H 1500 1160 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/pj-002a.pdf" H 1500 1160 50  0001 C CNN
 	1    1450 1200
 	1    0    0    -1  
 $EndComp

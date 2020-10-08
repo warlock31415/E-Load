@@ -352,6 +352,7 @@ F 0 "C16" H 10692 3471 50  0000 L CNN
 F 1 "1n" H 10425 3425 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10600 3425 50  0001 C CNN
 F 3 "~" H 10600 3425 50  0001 C CNN
+F 4 ">12V" H 10750 3350 50  0000 C CNN "Voltage"
 	1    10600 3425
 	1    0    0    -1  
 $EndComp
@@ -389,6 +390,7 @@ F 0 "C15" H 5617 2896 50  0000 L CNN
 F 1 "1n" H 5350 2850 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5525 2850 50  0001 C CNN
 F 3 "~" H 5525 2850 50  0001 C CNN
+F 4 ">12V" H 5625 2750 50  0000 C CNN "Voltage"
 	1    5525 2850
 	1    0    0    -1  
 $EndComp
@@ -480,6 +482,7 @@ F 0 "C17" H 6042 2896 50  0000 L CNN
 F 1 "1n" H 5775 2850 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5950 2850 50  0001 C CNN
 F 3 "~" H 5950 2850 50  0001 C CNN
+F 4 ">12V" H 6075 2750 50  0000 C CNN "Voltage"
 	1    5950 2850
 	1    0    0    -1  
 $EndComp
@@ -531,8 +534,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/dac121c081.pdf" H 2200 3200 50  0001 C CNN
 	1    2200 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2600 3200 3250 3200
 $Comp
 L power:GND #PWR0125
 U 1 1 5F7F8211
@@ -594,6 +595,32 @@ F 1 "GND" H 6155 1402 50  0000 C CNN
 F 2 "" H 6150 1575 50  0001 C CNN
 F 3 "" H 6150 1575 50  0001 C CNN
 	1    6150 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R20
+U 1 1 5F83F1D4
+P 3250 3475
+F 0 "R20" V 3054 3475 50  0000 C CNN
+F 1 "1k" V 3145 3475 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3250 3475 50  0001 C CNN
+F 3 "~" H 3250 3475 50  0001 C CNN
+	1    3250 3475
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2600 3200 3250 3200
+Wire Wire Line
+	3250 3200 3250 3375
+$Comp
+L power:GND #PWR01
+U 1 1 5F842985
+P 3250 3575
+F 0 "#PWR01" H 3250 3325 50  0001 C CNN
+F 1 "GND" H 3400 3525 50  0000 C CNN
+F 2 "" H 3250 3575 50  0001 C CNN
+F 3 "" H 3250 3575 50  0001 C CNN
+	1    3250 3575
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
