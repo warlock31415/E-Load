@@ -337,22 +337,6 @@ Wire Wire Line
 NoConn ~ 6500 3500
 Text Notes 6850 4000 0    50   ~ 0
 Needs to run at >500kHz
-Wire Wire Line
-	6000 4800 5900 4800
-Wire Wire Line
-	5800 4800 5900 4800
-Connection ~ 5900 4800
-$Comp
-L MCU_ST_STM32F1:STM32F102C8Tx U2
-U 1 1 5F7B3DDF
-P 5900 3300
-F 0 "U2" H 6200 1800 50  0000 C CNN
-F 1 "STM32F102C8Tx" H 6450 1700 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 5300 1900 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00210831.pdf" H 5900 3300 50  0001 C CNN
-	1    5900 3300
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:LED_Small_ALT D?
 U 1 1 5F81F246
@@ -396,4 +380,20 @@ Wire Wire Line
 	5050 4600 5200 4600
 Wire Wire Line
 	5050 4875 5050 5000
+$Comp
+L MCU_ST_STM32F1:STM32F103C8Tx U2
+U 1 1 5F8CF7B9
+P 5900 3300
+F 0 "U2" H 6275 1800 50  0000 C CNN
+F 1 "STM32F103C8Tx" H 6525 1650 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 5300 1900 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 5900 3300 50  0001 C CNN
+	1    5900 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4800 6000 4800
+Wire Wire Line
+	5800 4800 5900 4800
+Connection ~ 5900 4800
 $EndSCHEMATC
