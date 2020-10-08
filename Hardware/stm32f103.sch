@@ -240,27 +240,11 @@ Wire Wire Line
 Text HLabel 6850 3100 2    50   Input ~ 0
 ADC
 Wire Wire Line
-	5800 4800 5900 4800
-Wire Wire Line
 	5900 1800 6000 1800
-$Comp
-L MCU_ST_STM32F1:STM32F102C8Tx U2
-U 1 1 5F7B3DDF
-P 5900 3300
-F 0 "U2" H 6200 1800 50  0000 C CNN
-F 1 "STM32F102C8Tx" H 6450 1700 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 5300 1900 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00210831.pdf" H 5900 3300 50  0001 C CNN
-	1    5900 3300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6250 1600 6250 1800
 Wire Wire Line
 	6250 1800 6100 1800
-Wire Wire Line
-	6000 4800 5900 4800
-Connection ~ 5900 4800
 Text HLabel 4850 3600 0    50   Input ~ 0
 OLED_RST
 Wire Wire Line
@@ -328,7 +312,6 @@ NoConn ~ 5200 4200
 NoConn ~ 5200 4300
 NoConn ~ 5200 4400
 NoConn ~ 5200 4500
-NoConn ~ 5200 4600
 NoConn ~ 6500 4600
 NoConn ~ 6500 4300
 NoConn ~ 6500 4000
@@ -354,4 +337,63 @@ Wire Wire Line
 NoConn ~ 6500 3500
 Text Notes 6850 4000 0    50   ~ 0
 Needs to run at >500kHz
+Wire Wire Line
+	6000 4800 5900 4800
+Wire Wire Line
+	5800 4800 5900 4800
+Connection ~ 5900 4800
+$Comp
+L MCU_ST_STM32F1:STM32F102C8Tx U2
+U 1 1 5F7B3DDF
+P 5900 3300
+F 0 "U2" H 6200 1800 50  0000 C CNN
+F 1 "STM32F102C8Tx" H 6450 1700 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 5300 1900 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00210831.pdf" H 5900 3300 50  0001 C CNN
+	1    5900 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Small_ALT D?
+U 1 1 5F81F246
+P 5050 5100
+AR Path="/5F7C24CB/5F81F246" Ref="D?"  Part="1" 
+AR Path="/5F7B3BD2/5F81F246" Ref="D1"  Part="1" 
+F 0 "D1" V 5096 5030 50  0000 R CNN
+F 1 "LED_Small_ALT" V 5005 5030 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5050 5100 50  0001 C CNN
+F 3 "~" V 5050 5100 50  0001 C CNN
+	1    5050 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F81F24D
+P 5050 5200
+AR Path="/5F7C24CB/5F81F24D" Ref="#PWR?"  Part="1" 
+AR Path="/5F7B3BD2/5F81F24D" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 5050 4950 50  0001 C CNN
+F 1 "GND" H 5055 5027 50  0000 C CNN
+F 2 "" H 5050 5200 50  0001 C CNN
+F 3 "" H 5050 5200 50  0001 C CNN
+	1    5050 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5F820741
+P 5050 4775
+F 0 "R3" V 4854 4775 50  0000 C CNN
+F 1 "1k" V 4945 4775 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5050 4775 50  0001 C CNN
+F 3 "~" H 5050 4775 50  0001 C CNN
+	1    5050 4775
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5050 4675 5050 4600
+Wire Wire Line
+	5050 4600 5200 4600
+Wire Wire Line
+	5050 4875 5050 5000
 $EndSCHEMATC
