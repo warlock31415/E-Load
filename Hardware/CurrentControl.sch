@@ -485,7 +485,7 @@ F 3 "~" H 1600 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1325 3100 1500 3100
+	1325 3100 1375 3100
 Wire Wire Line
 	2200 3100 2225 3100
 Wire Wire Line
@@ -639,7 +639,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/tlv172.pdf" H 3725 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3150 3200 3525 3200
+	3150 3200 3250 3200
 $Comp
 L Device:R_Small R25
 U 1 1 5F8EC11D
@@ -764,4 +764,55 @@ Wire Wire Line
 Connection ~ 9700 3750
 Wire Wire Line
 	9700 3750 9700 3825
+$Comp
+L Connector:TestPoint_Alt TP2
+U 1 1 5F922816
+P 3250 3200
+F 0 "TP2" H 3308 3318 50  0000 L CNN
+F 1 "TestPoint_Alt" H 3308 3227 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 3450 3200 50  0001 C CNN
+F 3 "~" H 3450 3200 50  0001 C CNN
+	1    3250 3200
+	1    0    0    -1  
+$EndComp
+Connection ~ 3250 3200
+Wire Wire Line
+	3250 3200 3525 3200
+$Comp
+L Connector:TestPoint_Alt TP1
+U 1 1 5F9235DF
+P 1375 3100
+F 0 "TP1" H 1317 3126 50  0000 R CNN
+F 1 "TestPoint_Alt" H 1317 3217 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 1575 3100 50  0001 C CNN
+F 3 "~" H 1575 3100 50  0001 C CNN
+	1    1375 3100
+	-1   0    0    1   
+$EndComp
+Connection ~ 1375 3100
+Wire Wire Line
+	1375 3100 1500 3100
+$Comp
+L Connector:TestPoint_Alt TP4
+U 1 1 5F924D2A
+P 4675 3550
+F 0 "TP4" V 4629 3738 50  0000 L CNN
+F 1 "TestPoint_Alt" V 4720 3738 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 4875 3550 50  0001 C CNN
+F 3 "~" H 4875 3550 50  0001 C CNN
+	1    4675 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint_Alt TP3
+U 1 1 5F925FD4
+P 4375 3300
+F 0 "TP3" H 4550 3400 50  0000 R CNN
+F 1 "TestPoint_Alt" H 4725 3475 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 4575 3300 50  0001 C CNN
+F 3 "~" H 4575 3300 50  0001 C CNN
+	1    4375 3300
+	-1   0    0    1   
+$EndComp
+Connection ~ 4375 3300
 $EndSCHEMATC
