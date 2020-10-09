@@ -13,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:+3V3 #PWR0117
-U 1 1 5F7B523E
-P 5900 1600
-F 0 "#PWR0117" H 5900 1450 50  0001 C CNN
-F 1 "+3V3" H 5915 1773 50  0000 C CNN
-F 2 "" H 5900 1600 50  0001 C CNN
-F 3 "" H 5900 1600 50  0001 C CNN
-	1    5900 1600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5800 1800 5900 1800
 Connection ~ 5900 1800
@@ -95,10 +84,6 @@ Wire Wire Line
 Connection ~ 5800 4800
 Wire Wire Line
 	5800 4800 5800 5100
-Wire Wire Line
-	6500 4400 6850 4400
-Wire Wire Line
-	6500 4500 6850 4500
 Text HLabel 5050 2000 0    50   Input ~ 0
 ~RST
 Text HLabel 6850 4400 2    50   Input ~ 0
@@ -227,13 +212,9 @@ Text HLabel 5650 1700 1    50   Input ~ 0
 +3V3
 Text HLabel 5800 4950 2    50   Input ~ 0
 GND
-Wire Wire Line
-	5200 3700 4850 3700
-Wire Wire Line
-	5200 3800 4850 3800
-Text HLabel 4850 3700 0    50   Input ~ 0
+Text HLabel 4100 3700 0    50   Input ~ 0
 SCL
-Text HLabel 4850 3800 0    50   Input ~ 0
+Text HLabel 4125 3800 0    50   Input ~ 0
 SDA
 Wire Wire Line
 	6500 3100 6850 3100
@@ -390,4 +371,75 @@ Wire Wire Line
 Wire Wire Line
 	5800 4800 5900 4800
 Connection ~ 5900 4800
+$Comp
+L Device:R_Small R21
+U 1 1 5F7FD574
+P 4175 3325
+F 0 "R21" H 4000 3375 50  0000 L CNN
+F 1 "1k" H 4050 3300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4175 3325 50  0001 C CNN
+F 3 "~" H 4175 3325 50  0001 C CNN
+	1    4175 3325
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R22
+U 1 1 5F7FE183
+P 4375 3300
+F 0 "R22" H 4434 3346 50  0000 L CNN
+F 1 "1k" H 4434 3255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4375 3300 50  0001 C CNN
+F 3 "~" H 4375 3300 50  0001 C CNN
+	1    4375 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4175 3425 4175 3800
+Wire Wire Line
+	4375 3400 4375 3700
+$Comp
+L power:+3V3 #PWR0117
+U 1 1 5F7B523E
+P 5900 1600
+F 0 "#PWR0117" H 5900 1450 50  0001 C CNN
+F 1 "+3V3" H 5915 1773 50  0000 C CNN
+F 2 "" H 5900 1600 50  0001 C CNN
+F 3 "" H 5900 1600 50  0001 C CNN
+	1    5900 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR02
+U 1 1 5F800EB2
+P 4275 3100
+F 0 "#PWR02" H 4275 2950 50  0001 C CNN
+F 1 "+3V3" H 4290 3273 50  0000 C CNN
+F 2 "" H 4275 3100 50  0001 C CNN
+F 3 "" H 4275 3100 50  0001 C CNN
+	1    4275 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4275 3100 4175 3100
+Wire Wire Line
+	4175 3100 4175 3225
+Wire Wire Line
+	4275 3100 4375 3100
+Wire Wire Line
+	4375 3100 4375 3200
+Connection ~ 4275 3100
+Wire Wire Line
+	6500 4400 6850 4400
+Wire Wire Line
+	6500 4500 6850 4500
+Connection ~ 4175 3800
+Wire Wire Line
+	4175 3800 4125 3800
+Connection ~ 4375 3700
+Wire Wire Line
+	4375 3700 4100 3700
+Wire Wire Line
+	4375 3700 5200 3700
+Wire Wire Line
+	4175 3800 5200 3800
 $EndSCHEMATC
