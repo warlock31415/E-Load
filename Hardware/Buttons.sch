@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
-Title ""
-Date ""
-Rev ""
+Title "Electronic Load"
+Date "2020-10-12"
+Rev "0.0.1"
 Comp ""
 Comment1 ""
 Comment2 ""

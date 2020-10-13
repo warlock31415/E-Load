@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
-Title ""
-Date ""
-Rev ""
+Title "Electronic Load"
+Date "2020-10-12"
+Rev "0.0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -39,7 +39,7 @@ U 1 1 5F7B9DE4
 P 2250 1200
 F 0 "C1" H 2342 1246 50  0000 L CNN
 F 1 "10u" H 2342 1155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2250 1200 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2250 1200 50  0001 C CNN
 F 3 "~" H 2250 1200 50  0001 C CNN
 	1    2250 1200
 	1    0    0    -1  

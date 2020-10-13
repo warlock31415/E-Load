@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 4
-Title ""
-Date ""
-Rev ""
+Title "Electronic Load"
+Date "2020-10-12"
+Rev "0.0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -28,7 +28,7 @@ F 3 "~" H 5400 1700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5500 1700 5900 1700
+	5500 1700 5700 1700
 Wire Wire Line
 	5900 1600 5900 1700
 Connection ~ 5900 1700
@@ -297,7 +297,6 @@ NoConn ~ 6500 4100
 NoConn ~ 6500 3400
 NoConn ~ 6500 3300
 NoConn ~ 6500 3200
-NoConn ~ 5700 1800
 $Comp
 L power:VDDA #PWR0122
 U 1 1 5F7D7644
@@ -442,4 +441,9 @@ Wire Wire Line
 	4375 3700 5200 3700
 Wire Wire Line
 	4175 3800 5200 3800
+Wire Wire Line
+	5700 1800 5700 1700
+Connection ~ 5700 1700
+Wire Wire Line
+	5700 1700 5900 1700
 $EndSCHEMATC
