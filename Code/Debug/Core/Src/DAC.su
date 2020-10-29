@@ -1,0 +1,5 @@
+cmath:1771:3:constexpr float std::round(float)	16	static
+DAC.cpp:10:1:DAC::DAC(I2C_HandleTypeDef, uint8_t)	16	static
+DAC.cpp:17:19:HAL_StatusTypeDef DAC::setValue(float)	24	static
+DAC.cpp:29:6:void DAC::checkLimits()	16	static
+DAC.cpp:37:6:void DAC::setPowerMode(DACStates)	16	static
