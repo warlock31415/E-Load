@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 3 5
 Title "Electronic Load"
 Date "2020-10-12"
 Rev "0.0.1"
@@ -13,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Transistor_FET:BUK7M45-40EX Q1
-U 1 1 5F7C294E
-P 4575 3300
-F 0 "Q1" H 4779 3346 50  0000 L CNN
-F 1 "BUK7M45-40EX" H 4779 3255 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:LFPAK33" H 4775 3225 50  0001 L CIN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BUK7M45-40E.pdf" V 4575 3300 50  0001 L CNN
-	1    4575 3300
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R_Small R4
 U 1 1 5F7C886E
@@ -37,7 +26,7 @@ F 4 ">3W" H 3634 3759 50  0000 L CNN "Power "
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4675 3500 4675 3550
+	4675 3450 4675 3550
 Connection ~ 4675 3750
 $Comp
 L power:VCC #PWR0123
@@ -51,21 +40,10 @@ F 3 "" H 4675 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4675 2700 4675 3100
+	4675 2700 4675 3050
 Connection ~ 4675 3550
 Wire Wire Line
 	4675 3550 4675 3750
-$Comp
-L Connector:Screw_Terminal_01x03 J4
-U 1 1 5F83A2FB
-P 6600 1325
-F 0 "J4" H 6680 1367 50  0000 L CNN
-F 1 "Screw_Terminal_01x03" H 6680 1276 50  0000 L CNN
-F 2 "Connector_TE-Connectivity:TE_826576-3_1x03_P3.96mm_Vertical" H 6600 1325 50  0001 C CNN
-F 3 "~" H 6600 1325 50  0001 C CNN
-	1    6600 1325
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:VCC #PWR0133
 U 1 1 5F83AD5F
@@ -81,10 +59,6 @@ Wire Wire Line
 	6200 1075 6200 1225
 Wire Wire Line
 	6200 1225 6400 1225
-Wire Wire Line
-	6400 1425 6150 1425
-Wire Wire Line
-	6150 1425 6150 1575
 Wire Wire Line
 	3575 3950 3875 3950
 Wire Wire Line
@@ -248,14 +222,12 @@ Connection ~ 5725 3950
 Text Label 4425 3550 0    50   ~ 0
 Vmeas
 Wire Wire Line
-	8925 3500 8925 3925
-Wire Wire Line
 	8925 3925 9525 3925
 Wire Wire Line
-	9525 3925 9525 3400
+	9525 3925 9525 3350
 Text Label 7800 3300 0    50   ~ 0
 Vmeas
-Text HLabel 9700 3400 2    50   Input ~ 0
+Text HLabel 9675 3350 2    50   Input ~ 0
 ADC
 Wire Notes Line
 	6675 2300 6675 4500
@@ -277,47 +249,28 @@ Wire Notes Line
 	600  2425 6175 2425
 Text Notes 625  2375 0    50   ~ 0
 Current Control
-Wire Wire Line
-	9525 3400 9700 3400
-Wire Wire Line
-	7800 3300 8925 3300
-NoConn ~ 6400 1325
-$Comp
-L Amplifier_Operational:TLV172IDCK U4
-U 1 1 5F89C6FF
-P 9125 3400
-F 0 "U4" H 9225 3725 50  0000 L CNN
-F 1 "TLV172IDCK" H 9125 3625 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-353_SC-70-5" H 9325 3400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlv172.pdf" H 9125 3400 50  0001 C CNN
-	1    9125 3400
-	1    0    0    -1  
-$EndComp
-Connection ~ 9525 3400
 $Comp
 L power:GND #PWR0126
 U 1 1 5F89E085
-P 9125 3700
-F 0 "#PWR0126" H 9125 3450 50  0001 C CNN
-F 1 "GND" H 9275 3650 50  0000 C CNN
-F 2 "" H 9125 3700 50  0001 C CNN
-F 3 "" H 9125 3700 50  0001 C CNN
-	1    9125 3700
+P 9150 3700
+F 0 "#PWR0126" H 9150 3450 50  0001 C CNN
+F 1 "GND" H 9300 3650 50  0000 C CNN
+F 2 "" H 9150 3700 50  0001 C CNN
+F 3 "" H 9150 3700 50  0001 C CNN
+	1    9150 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR0139
 U 1 1 5F89EB39
-P 9125 3025
-F 0 "#PWR0139" H 9125 2875 50  0001 C CNN
-F 1 "+12V" H 9140 3198 50  0000 C CNN
-F 2 "" H 9125 3025 50  0001 C CNN
-F 3 "" H 9125 3025 50  0001 C CNN
-	1    9125 3025
+P 9150 3025
+F 0 "#PWR0139" H 9150 2875 50  0001 C CNN
+F 1 "+12V" H 9165 3198 50  0000 C CNN
+F 2 "" H 9150 3025 50  0001 C CNN
+F 3 "" H 9150 3025 50  0001 C CNN
+	1    9150 3025
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9125 3025 9125 3100
 $Comp
 L power:+12V #PWR03
 U 1 1 5F8A7ADB
@@ -395,35 +348,20 @@ F 4 ">12V" H 5625 2750 50  0000 C CNN "Voltage"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TLV172IDCK U5
-U 1 1 5F8E48FD
-P 3725 3300
-F 0 "U5" H 3825 3625 50  0000 L CNN
-F 1 "TLV172IDCK" H 3725 3525 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-353_SC-70-5" H 3925 3300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlv172.pdf" H 3725 3300 50  0001 C CNN
-	1    3725 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Small R25
 U 1 1 5F8EC11D
-P 4250 3300
-F 0 "R25" V 4054 3300 50  0000 C CNN
-F 1 "50" V 4145 3300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4250 3300 50  0001 C CNN
-F 3 "~" H 4250 3300 50  0001 C CNN
-	1    4250 3300
+P 4225 3250
+F 0 "R25" V 4029 3250 50  0000 C CNN
+F 1 "50" V 4120 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4225 3250 50  0001 C CNN
+F 3 "~" H 4225 3250 50  0001 C CNN
+	1    4225 3250
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4150 3300 4125 3300
+	4325 3250 4375 3250
 Wire Wire Line
-	4350 3300 4375 3300
-Wire Wire Line
-	3525 3400 3525 3550
-Wire Wire Line
-	3525 3550 4675 3550
+	3525 3550 3975 3550
 $Comp
 L power:+12V #PWR07
 U 1 1 5F8F0C24
@@ -435,8 +373,6 @@ F 3 "" H 3725 2925 50  0001 C CNN
 	1    3725 2925
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3725 2925 3725 3000
 $Comp
 L power:GND #PWR08
 U 1 1 5F8F2700
@@ -491,7 +427,7 @@ L Connector:TestPoint_Alt TP2
 U 1 1 5F922816
 P 3250 3200
 F 0 "TP2" H 3308 3318 50  0000 L CNN
-F 1 "TestPoint_Alt" H 2725 3250 50  0000 L CNN
+F 1 "TestPoint_Alt" H 2725 3250 50  0001 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 3450 3200 50  0001 C CNN
 F 3 "~" H 3450 3200 50  0001 C CNN
 	1    3250 3200
@@ -505,7 +441,7 @@ L Connector:TestPoint_Alt TP4
 U 1 1 5F924D2A
 P 4675 3550
 F 0 "TP4" V 4629 3738 50  0000 L CNN
-F 1 "TestPoint_Alt" V 4720 3738 50  0000 L CNN
+F 1 "TestPoint_Alt" V 4720 3738 50  0001 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 4875 3550 50  0001 C CNN
 F 3 "~" H 4875 3550 50  0001 C CNN
 	1    4675 3550
@@ -514,15 +450,14 @@ $EndComp
 $Comp
 L Connector:TestPoint_Alt TP3
 U 1 1 5F925FD4
-P 4375 3300
-F 0 "TP3" H 4550 3400 50  0000 R CNN
-F 1 "TestPoint_Alt" H 4725 3475 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 4575 3300 50  0001 C CNN
-F 3 "~" H 4575 3300 50  0001 C CNN
-	1    4375 3300
-	-1   0    0    1   
+P 4100 3250
+F 0 "TP3" H 4075 3350 50  0000 R CNN
+F 1 "TestPoint_Alt" V 4100 4000 50  0001 R CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 4300 3250 50  0001 C CNN
+F 3 "~" H 4300 3250 50  0001 C CNN
+	1    4100 3250
+	1    0    0    -1  
 $EndComp
-Connection ~ 4375 3300
 $Comp
 L Analog_DAC:DAC121C081CIMK U3
 U 1 1 5F7F67FD
@@ -545,10 +480,6 @@ F 3 "" H 2200 3500 50  0001 C CNN
 	1    2200 3500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1800 3100 1375 3100
-Wire Wire Line
-	1800 3200 1375 3200
 Text HLabel 1375 3100 0    50   Input ~ 0
 SCL
 Text HLabel 1375 3200 0    50   Input ~ 0
@@ -623,4 +554,115 @@ F 3 "" H 3250 3575 50  0001 C CNN
 	1    3250 3575
 	1    0    0    -1  
 $EndComp
+$Comp
+L E-Load-rescue:TLV9102IPWR U4
+U 1 1 5F9CD8CF
+P 3825 3250
+F 0 "U4" H 3750 3450 50  0000 L CNN
+F 1 "TLV9102IPWR" H 3750 3550 50  0000 L CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 3825 3250 50  0001 C CNN
+F 3 "" H 3825 3250 50  0001 C CNN
+	1    3825 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3975 3250 4100 3250
+Wire Wire Line
+	3725 2925 3725 3050
+Wire Wire Line
+	3725 3450 3725 3600
+Wire Wire Line
+	3525 3300 3525 3550
+$Comp
+L E-Load-rescue:TLV9102IPWR U4
+U 2 1 5F9D991A
+P 9250 3350
+F 0 "U4" H 9175 3550 50  0000 L CNN
+F 1 "TLV9102IPWR" H 9175 3650 50  0000 L CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 9250 3350 50  0001 C CNN
+F 3 "" H 9250 3350 50  0001 C CNN
+	2    9250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3025 9150 3150
+Wire Wire Line
+	9150 3550 9150 3700
+Wire Wire Line
+	7800 3300 8950 3300
+Wire Wire Line
+	9400 3350 9525 3350
+Connection ~ 9525 3350
+Wire Wire Line
+	9525 3350 9675 3350
+Wire Wire Line
+	8950 3400 8925 3400
+Wire Wire Line
+	8925 3400 8925 3925
+$Comp
+L Device:R_Small R23
+U 1 1 5F9E4082
+P 4225 3550
+F 0 "R23" V 4029 3550 50  0000 C CNN
+F 1 "1k" V 4120 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4225 3550 50  0001 C CNN
+F 3 "~" H 4225 3550 50  0001 C CNN
+	1    4225 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4325 3550 4675 3550
+$Comp
+L Device:C_Small C13
+U 1 1 5F9E4F80
+P 3975 3425
+F 0 "C13" H 4067 3471 50  0000 L CNN
+F 1 "470p" H 3775 3375 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3975 3425 50  0001 C CNN
+F 3 "~" H 3975 3425 50  0001 C CNN
+F 4 ">12V" H 4075 3325 50  0000 C CNN "Voltage"
+	1    3975 3425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3975 3325 3975 3250
+Connection ~ 3975 3250
+Wire Wire Line
+	3975 3525 3975 3550
+Connection ~ 3975 3550
+Wire Wire Line
+	3975 3550 4125 3550
+$Comp
+L Transistor_FET:PSMN5R2-60YL Q1
+U 1 1 5F9E861A
+P 4575 3250
+F 0 "Q1" H 4780 3296 50  0000 L CNN
+F 1 "PSMN5R2-60YL" H 4780 3205 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:LFPAK56" H 4725 3250 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PSMN5R2-60YL.pdf" H 4575 3250 50  0001 C CNN
+	1    4575 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 4100 3250
+Wire Wire Line
+	4100 3250 4125 3250
+Wire Wire Line
+	1375 3100 1800 3100
+Wire Wire Line
+	1375 3200 1800 3200
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 5FA56BB5
+P 6600 1225
+F 0 "J4" H 6680 1217 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 6680 1126 50  0000 L CNN
+F 2 "Connector_TE-Connectivity:TE_826576-2_1x02_P3.96mm_Vertical" H 6600 1225 50  0001 C CNN
+F 3 "~" H 6600 1225 50  0001 C CNN
+	1    6600 1225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 1325 6400 1325
+Wire Wire Line
+	6150 1325 6150 1575
 $EndSCHEMATC
