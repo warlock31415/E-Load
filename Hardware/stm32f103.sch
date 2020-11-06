@@ -219,7 +219,7 @@ SDA
 Wire Wire Line
 	6500 3100 6850 3100
 Text HLabel 6850 3100 2    50   Input ~ 0
-ADC
+Vin_ADC
 Wire Wire Line
 	5900 1800 6000 1800
 Wire Wire Line
@@ -296,7 +296,6 @@ NoConn ~ 6500 4200
 NoConn ~ 6500 4100
 NoConn ~ 6500 3400
 NoConn ~ 6500 3300
-NoConn ~ 6500 3200
 $Comp
 L power:VDDA #PWR0122
 U 1 1 5F7D7644
@@ -446,4 +445,8 @@ Wire Wire Line
 Connection ~ 5700 1700
 Wire Wire Line
 	5700 1700 5900 1700
+Wire Wire Line
+	6500 3200 6850 3200
+Text HLabel 6850 3200 2    50   Input ~ 0
+Currrent_ADC
 $EndSCHEMATC

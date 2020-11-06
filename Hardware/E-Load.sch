@@ -25,11 +25,12 @@ F5 "+3V3" I L 5350 3350 50
 F6 "GND" I L 5350 4100 50 
 F7 "SCL" I R 7000 3850 50 
 F8 "SDA" I R 7000 3950 50 
-F9 "ADC" I R 7000 4425 50 
-F10 "OLED_RST" I R 7000 3750 50 
-F11 "BUTT_A" I L 5350 3550 50 
-F12 "BUTT_B" I L 5350 3650 50 
-F13 "BUTT_C" I L 5350 3750 50 
+F9 "OLED_RST" I R 7000 3750 50 
+F10 "BUTT_A" I L 5350 3550 50 
+F11 "BUTT_B" I L 5350 3650 50 
+F12 "BUTT_C" I L 5350 3750 50 
+F13 "Vin_ADC" I R 7000 4475 50 
+F14 "Currrent_ADC" I R 7000 4400 50 
 $EndSheet
 Text Notes 10050 1100 0    50   ~ 0
 Requirements\n1. 12V DC input\n2. 0-10A Load current\n3. OLED Display\n4. 0- 30V load voltage\n5. 10mA increments\n
@@ -233,9 +234,10 @@ S 7275 4175 600  450
 U 5F7C24CB
 F0 "CurrentControl" 50
 F1 "CurrentControl.sch" 50
-F2 "ADC" I L 7275 4425 50 
-F3 "SCL" I L 7275 4250 50 
-F4 "SDA" I L 7275 4325 50 
+F2 "SCL" I L 7275 4250 50 
+F3 "SDA" I L 7275 4325 50 
+F4 "Vin_ADC" I L 7275 4475 50 
+F5 "Current_ADC" I L 7275 4400 50 
 $EndSheet
 $Comp
 L Connector:Conn_01x08_Male J3
@@ -367,8 +369,6 @@ F 3 "~" H 6200 2975 50  0001 C CNN
 	1    6200 2975
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7275 4425 7000 4425
 $Comp
 L power:+12V #PWR0110
 U 1 1 5F7DD5D6
@@ -453,4 +453,8 @@ $EndComp
 Wire Wire Line
 	1750 1200 1750 1300
 Connection ~ 1750 1300
+Wire Wire Line
+	7000 4475 7275 4475
+Wire Wire Line
+	7000 4400 7275 4400
 $EndSCHEMATC
