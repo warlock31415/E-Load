@@ -35,32 +35,18 @@ $EndSheet
 Text Notes 10050 1100 0    50   ~ 0
 Requirements\n1. 12V DC input\n2. 0-10A Load current\n3. OLED Display\n4. 0- 30V load voltage\n5. 10mA increments\n
 $Comp
-L Device:C_Small C1
-U 1 1 5F7B9DE4
-P 2250 1200
-F 0 "C1" H 2342 1246 50  0000 L CNN
-F 1 "10u" H 2342 1155 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2250 1200 50  0001 C CNN
-F 3 "~" H 2250 1200 50  0001 C CNN
-	1    2250 1200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C3
 U 1 1 5F7BAD5D
 P 2750 1200
 F 0 "C3" H 2842 1246 50  0000 L CNN
-F 1 "0.1uF" H 2842 1155 50  0000 L CNN
+F 1 "100nF" H 2842 1155 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2750 1200 50  0001 C CNN
 F 3 "~" H 2750 1200 50  0001 C CNN
+F 4 "" H 2750 1200 50  0001 C CNN "Digikey"
+F 5 "C28061" H 2750 1200 50  0001 C CNN "LCSC"
 	1    2750 1200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1750 1100 2250 1100
-Connection ~ 2250 1100
-Wire Wire Line
-	2250 1100 2750 1100
 Wire Wire Line
 	1750 1300 2250 1300
 Connection ~ 2250 1300
@@ -97,6 +83,8 @@ F 0 "U1" H 2100 2000 50  0000 L CNN
 F 1 "AP2210K-3.3" H 2100 1900 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 1900 2350 50  0001 C CNN
 F 3 "" H 1900 2350 50  0001 C CNN
+F 4 "" H 1900 2350 50  0001 C CNN "Digikey"
+F 5 "C264085" H 1900 2350 50  0001 C CNN "LCSC"
 	1    1900 2350
 	1    0    0    -1  
 $EndComp
@@ -169,6 +157,8 @@ F 0 "C2" H 2642 2496 50  0000 L CNN
 F 1 "2.2uF" H 2642 2405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2550 2450 50  0001 C CNN
 F 3 "~" H 2550 2450 50  0001 C CNN
+F 4 "" H 2550 2450 50  0001 C CNN "Digikey"
+F 5 "C92783" H 2550 2450 50  0001 C CNN "LCSC"
 	1    2550 2450
 	1    0    0    -1  
 $EndComp
@@ -247,6 +237,8 @@ F 0 "J3" H 9272 3532 50  0000 R CNN
 F 1 "Conn_01x08_Male" H 9272 3623 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 9300 3650 50  0001 C CNN
 F 3 "~" H 9300 3650 50  0001 C CNN
+F 4 "" H 9300 3650 50  0001 C CNN "Digikey"
+F 5 "C50981" H 9300 3650 50  0001 C CNN "LCSC"
 	1    9300 3650
 	-1   0    0    1   
 $EndComp
@@ -298,6 +290,8 @@ F 0 "J2" H 7672 2182 50  0000 R CNN
 F 1 "Conn_01x05_Male" H 7672 2273 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7700 2250 50  0001 C CNN
 F 3 "~" H 7700 2250 50  0001 C CNN
+F 4 "" H 7700 2250 50  0001 C CNN "Digikey"
+F 5 "C50981" H 7700 2250 50  0001 C CNN "LCSC"
 	1    7700 2250
 	0    1    1    0   
 $EndComp
@@ -366,6 +360,8 @@ F 0 "FB1" V 6474 2975 50  0000 C CNN
 F 1 "Ferrite_Bead" V 6383 2975 50  0000 C CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" V 6130 2975 50  0001 C CNN
 F 3 "~" H 6200 2975 50  0001 C CNN
+F 4 "" V 6200 2975 50  0001 C CNN "Digikey"
+F 5 "C16902" V 6200 2975 50  0001 C CNN "LCSC"
 	1    6200 2975
 	0    -1   -1   0   
 $EndComp
@@ -447,6 +443,7 @@ F 0 "J1" H 1507 1517 50  0000 C CNN
 F 1 "PJ-002A" H 1507 1426 50  0000 C CNN
 F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 1500 1160 50  0001 C CNN
 F 3 "https://www.cuidevices.com/product/resource/pj-002a.pdf" H 1500 1160 50  0001 C CNN
+F 4 "CP-002A-ND" H 1450 1200 50  0001 C CNN "Digikey"
 	1    1450 1200
 	1    0    0    -1  
 $EndComp
@@ -457,4 +454,22 @@ Wire Wire Line
 	7000 4475 7275 4475
 Wire Wire Line
 	7000 4400 7275 4400
+Wire Wire Line
+	2250 1100 2750 1100
+Wire Wire Line
+	1750 1100 2250 1100
+Connection ~ 2250 1100
+$Comp
+L Device:C_Small C1
+U 1 1 5F7B9DE4
+P 2250 1200
+F 0 "C1" H 2342 1246 50  0000 L CNN
+F 1 "10u" H 2342 1155 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2250 1200 50  0001 C CNN
+F 3 "~" H 2250 1200 50  0001 C CNN
+F 4 "732-8937-1-ND" H 2250 1200 50  0001 C CNN "DigiKey"
+F 5 "C43799" H 2250 1200 50  0001 C CNN "LCSC"
+	1    2250 1200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
