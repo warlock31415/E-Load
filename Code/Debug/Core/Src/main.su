@@ -1,8 +1,9 @@
 Buttons.hpp:16:8:AllButtons::AllButtons()	16	static
-main.cpp:74:5:int main()	312	static
-main.cpp:159:6:void SystemClock_Config()	88	static
-main.cpp:202:13:void MX_ADC1_Init()	24	static
-main.cpp:247:13:void MX_I2C1_Init()	8	static
-main.cpp:281:13:void MX_TIM1_Init()	32	static
-main.cpp:327:13:void MX_GPIO_Init()	32	static
-main.cpp:361:6:void Error_Handler()	40	static
+main.cpp:75:5:int main()	312	static
+main.cpp:173:6:void SystemClock_Config()	88	static
+main.cpp:216:13:void MX_ADC1_Init()	24	static
+main.cpp:269:13:void MX_I2C1_Init()	8	static
+main.cpp:303:13:void MX_TIM1_Init()	32	static
+main.cpp:347:13:void MX_DMA_Init()	16	static
+main.cpp:365:13:void MX_GPIO_Init()	32	static
+main.cpp:399:6:void Error_Handler()	40	static

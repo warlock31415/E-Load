@@ -1,5 +1,4 @@
-Core/Src/Buttons.o: ../Core/Src/Buttons.cpp \
- ../Core/Src/../Inc/Buttons.hpp ../Core/Inc/main.hpp \
+Core/Src/ssd1306.o: ../Core/Src/ssd1306.c ../Core/Inc/ssd1306.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -27,11 +26,9 @@ Core/Src/Buttons.o: ../Core/Src/Buttons.cpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Src/../Inc/Buttons.hpp
+ ../Core/Inc/fonts.h
 
-../Core/Src/../Inc/Buttons.hpp:
-
-../Core/Inc/main.hpp:
+../Core/Inc/ssd1306.h:
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 
@@ -87,4 +84,4 @@ Core/Src/Buttons.o: ../Core/Src/Buttons.cpp \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
-../Core/Src/../Inc/Buttons.hpp:
+../Core/Inc/fonts.h:

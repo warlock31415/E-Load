@@ -18,13 +18,13 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include "../Inc/main.hpp"
+#include <main.hpp>
 
-#include "../Inc/Buttons.hpp"
-
-#include "../Inc/ADC.hpp"
-
-#include "../Inc/DAC.hpp"
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include "ADC.hpp"
+#include "Buttons.hpp"
+#include "DAC.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,18 +43,19 @@
 
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
+DMA_HandleTypeDef hdma_adc1;
 
 I2C_HandleTypeDef hi2c1;
 
 TIM_HandleTypeDef htim1;
 
 /* USER CODE BEGIN PV */
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_TIM1_Init(void);
@@ -95,21 +96,23 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_ADC1_Init();
   MX_I2C1_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-  AllButtons Butt;
-  ADC Adc(hadc1);
+
+  AllButtons Butt;  //Button Class
+
+  ADC Adc(hadc1);   // ADC Class
+
+
   if(Adc.ADC_Error != HAL_OK)
   {
 	  Error_Handler();
   }
-  double raw = 0;
 
-
-
-  buttons butt;
+  buttons butt; // Buttons struct
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
 
   static const uint8_t DAC_ADDR = 0b0001100<<1; // Need to shift to the left. Bit 0 is R/W bit
@@ -122,6 +125,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  double * raw = Adc.ADC_getValue();
+
   while (1)
   {
     /* USER CODE END WHILE */
@@ -129,19 +134,28 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	Butt.readButtons(&butt);
 
-	if (butt.A == true || butt.B == true || butt.C == true)
+	if (butt.A == true)
+	{
+		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+
+	}
+	if (butt.B == true)
 	{
 		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 	}
+    if (butt.C == true)
+	{
+    	HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+	}
 
-	raw = Adc.ADC_getValue();
+
 	if(raw <= 0)
 	{
 		Error_Handler();
 	}
 
-
-	ret = Dac.setValue(5);
+    raw = Adc.ADC_getValue();
+	//ret = Dac.setValue(5);
 	if(ret != HAL_OK)
 	{
 		Error_Handler();
@@ -214,21 +228,29 @@ static void MX_ADC1_Init(void)
   /** Common config
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
-  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
+  hadc1.Init.ContinuousConvMode = ENABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc1.Init.NbrOfConversion = 1;
+  hadc1.Init.NbrOfConversion = 2;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
     Error_Handler();
   }
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_0;
+  sConfig.Channel = ADC_CHANNEL_1;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_239CYCLES_5;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_0;
+  sConfig.Rank = ADC_REGULAR_RANK_2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -320,6 +342,22 @@ static void MX_TIM1_Init(void)
 }
 
 /**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -335,8 +373,8 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PA5 PA6 PA7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
+  /*Configure GPIO pins : A_Pin B_Pin C_Pin */
+  GPIO_InitStruct.Pin = A_Pin|B_Pin|C_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);

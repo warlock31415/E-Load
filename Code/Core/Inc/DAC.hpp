@@ -8,7 +8,7 @@
 #ifndef INC_DAC_HPP_
 #define INC_DAC_HPP_
 
-#include "main.hpp"
+#include <main.hpp>
 #include "stdint.h"
 #include <math.h>
 

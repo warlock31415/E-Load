@@ -1,9 +1,9 @@
 #ifndef BUTTONS_H
 #define BUTTONS_H
 
+#include <main.hpp>
 #include <cstdint>
 #include "Buttons.hpp"
-#include "main.hpp"
 
 
 struct buttons{

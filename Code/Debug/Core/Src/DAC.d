@@ -1,6 +1,5 @@
 Core/Src/DAC.o: ../Core/Src/DAC.cpp ../Core/Src/../Inc/DAC.hpp \
- ../Core/Src/../Inc/main.hpp \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+ ../Core/Inc/main.hpp ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
@@ -30,7 +29,7 @@ Core/Src/DAC.o: ../Core/Src/DAC.cpp ../Core/Src/../Inc/DAC.hpp \
 
 ../Core/Src/../Inc/DAC.hpp:
 
-../Core/Src/../Inc/main.hpp:
+../Core/Inc/main.hpp:
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 

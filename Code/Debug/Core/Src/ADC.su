@@ -1,2 +1,2 @@
 ADC.cpp:9:1:ADC::ADC(ADC_HandleTypeDef)	24	static
-ADC.cpp:15:8:double ADC::ADC_getValue()	24	static
+ADC.cpp:16:9:double* ADC::ADC_getValue()	40	static

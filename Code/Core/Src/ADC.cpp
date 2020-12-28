@@ -10,16 +10,19 @@ ADC::ADC(ADC_HandleTypeDef hadc1)
 {
 	this->hadc = hadc1;
 	this->ADC_Error = HAL_ADCEx_Calibration_Start(&hadc);
+	HAL_ADC_Start_DMA(&hadc, (uint32_t*)this->ADCBuffer, 2);
 }
 
-double ADC::ADC_getValue()
+double* ADC::ADC_getValue()
 {
-	HAL_ADC_Start(&hadc);
-	HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
-	ADC_Val = HAL_ADC_GetValue(&hadc) * this->conversion_factor;
 
-	return ADC_Val;
+	double Voltage[2] = {this->ADCBuffer[0] * this->conversion_factor,
+						 this->ADCBuffer[1] * this->conversion_factor};
+	return Voltage;
 }
+
+
+
 
 
 

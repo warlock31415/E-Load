@@ -1,4 +1,4 @@
-Core/Src/main.o: ../Core/Src/main.cpp ../Core/Src/../Inc/main.hpp \
+Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.hpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -26,11 +26,10 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Src/../Inc/main.hpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Src/../Inc/Buttons.hpp ../Core/Src/../Inc/Buttons.hpp \
- ../Core/Src/../Inc/main.hpp ../Core/Src/../Inc/ADC.hpp \
- ../Core/Src/../Inc/DAC.hpp
+ ../Core/Inc/ADC.hpp ../Core/Inc/Buttons.hpp ../Core/Inc/Buttons.hpp \
+ ../Core/Inc/DAC.hpp
 
-../Core/Src/../Inc/main.hpp:
+../Core/Inc/main.hpp:
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 
@@ -86,12 +85,10 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Src/../Inc/main.hpp \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
-../Core/Src/../Inc/Buttons.hpp:
+../Core/Inc/ADC.hpp:
 
-../Core/Src/../Inc/Buttons.hpp:
+../Core/Inc/Buttons.hpp:
 
-../Core/Src/../Inc/main.hpp:
+../Core/Inc/Buttons.hpp:
 
-../Core/Src/../Inc/ADC.hpp:
-
-../Core/Src/../Inc/DAC.hpp:
+../Core/Inc/DAC.hpp:
